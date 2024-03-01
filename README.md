@@ -13,7 +13,8 @@ import { Scene, Sprite, Vector3 } from "three";
 
 
 const VelocityComponent = defineComponent(
-  // since defineComponent takes a class, we get many of the niceties of classes, like the readonly keyword and static methods
+  // since defineComponent takes a class, we get many of the niceties of classes, like the
+  // readonly keyword and static methods
   class VelocityComponent {
     readonly velocity = new Vector3();
     // if you want a component to be (de)serializable, define the required static methods
@@ -38,7 +39,8 @@ const VelocityComponent = defineComponent(
 );
 
 const SpriteComponent = defineComponent(
-  // in order to use getters and setters, we must use Object.defineProperty, but there's a convenient mixin for that.
+  // in order to use getters and setters, we must use Object.defineProperty, but there's a
+  // convenient mixin for that.
   WithGetterSetter(
     "visible",
     (c) => c.sprite.visible,
@@ -49,7 +51,8 @@ const SpriteComponent = defineComponent(
       readonly position = this.sprite.position;
       // unfortunately, private fields won't carry over
       #doestWork: string
-      // get and set keywords won't work, either. Gotta use WithGetterSetter until I figure out why.
+      // get and set keywords won't work, either. Gotta use WithGetterSetter until I figure
+      // out why.
       get doesntWork() {
         return this.#secret
       }
