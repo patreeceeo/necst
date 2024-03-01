@@ -1,6 +1,9 @@
 # NecsT
 
-A simple ECS in TypeScript.
+'Nother Entity Component System, in TypeScript.
+
+A Simple, flexible ECS.
+
 
 ## Example Usage
 
