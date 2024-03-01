@@ -1,0 +1,35 @@
+{
+  "name": "necst",
+  "packageManager": "yarn@4.0.2+sha256.825003a0f561ad09a3b1ac4a3b3ea6207af2796d54f62a9420520915721f5186",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "NODE_ENV=test ts-node --transpileOnly --esm --experimentalSpecifierResolution=node test.ts",
+    "test-dev": "NODE_OPTIONS=\"--max_old_space_size=8192\" NODE_ENV=test nodemon --transpileOnly --experimentalSpecifierResolution=node test.ts -w \"**/*.ts\"",
+    "type-check": "tsc --noEmit",
+    "graph-deps": "madge --image dependency_graph.svg src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.7",
+    "@types/three": "^0.161.2",
+    "chokidar": "^3.5.3",
+    "glob": "^10.3.10",
+    "lodash": "^4.17.21",
+    "madge": "^6.1.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "process": "^0.11.10",
+    "three": "^0.161.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "nodemonConfig": {
+    "execMap": {
+      "ts": "ts-node-esm"
+    }
+  },
+  "prettier": {
+    "trailingComma": "none"
+  }
+}
