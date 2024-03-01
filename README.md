@@ -4,6 +4,8 @@
 
 A Simple, flexible ECS.
 
+Emphasizes ECS as a design pattern for simplifying cases of needing entities with many permutations of
+common behaviors, rather than a technique for optimizing memory layout.
 
 ## Example Usage
 
