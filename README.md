@@ -50,11 +50,11 @@ const SpriteComponent = defineComponent(
       sprite = new Sprite();
       readonly position = this.sprite.position;
       // unfortunately, private fields won't carry over
-      #doestWork: string
+      #doesntWork: string
       // get and set keywords won't work, either. Gotta use WithGetterSetter until I figure
       // out why.
       get doesntWork() {
-        return this.#secret
+        return this.#doesntWork
       }
     }
   )
